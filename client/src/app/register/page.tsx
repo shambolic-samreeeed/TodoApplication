@@ -61,6 +61,15 @@ export default function RegisterPage() {
           Register
         </button>
       </form>
+
+      <div className="mt-4 text-center">
+        <button
+          onClick={() => router.push("/login")}
+          className="text-yellow-500 hover:underline"
+        >
+          Already have an account? Login
+        </button>
+      </div>
     </main>
   );
 }

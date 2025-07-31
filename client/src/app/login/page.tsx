@@ -52,6 +52,15 @@ export default function LoginPage() {
           Login
         </button>
       </form>
+
+      <div className="mt-4 text-center">
+        <button
+          onClick={() => router.push("/register")}
+          className="text-yellow-500 hover:underline"
+        >
+          Don&apos;t have an account? Register
+        </button>
+      </div>
     </main>
   );
 }
