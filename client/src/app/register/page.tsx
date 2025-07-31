@@ -24,32 +24,42 @@ export default function RegisterPage() {
   };
 
   return (
-    <main style={{ maxWidth: 400, margin: "auto", padding: 20 }}>
-      <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
+    <main className="max-w-md mx-auto p-6 bg-gray-800 rounded-lg shadow-lg mt-10 text-white">
+      <h1 className="text-3xl font-bold mb-6 text-center">Register</h1>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
+          className="bg-gray-700 text-white rounded-md px-4 py-3 outline-none 
+                     focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-75 transition-shadow"
         />
-        <br />
         <input
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          type="email"
+          className="bg-gray-700 text-white rounded-md px-4 py-3 outline-none 
+                     focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-75 transition-shadow"
         />
-        <br />
         <input
           placeholder="Password"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          className="bg-gray-700 text-white rounded-md px-4 py-3 outline-none 
+                     focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-75 transition-shadow"
         />
-        <br />
-        <button type="submit">Register</button>
+        <button
+          type="submit"
+          className="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold 
+                     rounded-md py-3 transition"
+        >
+          Register
+        </button>
       </form>
     </main>
   );
